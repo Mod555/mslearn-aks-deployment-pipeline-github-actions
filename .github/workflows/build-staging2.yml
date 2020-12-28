@@ -17,7 +17,7 @@ on:
   uses: docker/build-push-action@v1.1.1
   with:
    username: ContosoContainerRegistry17072
-          password: 5F6oiodSV60sKdAXd4Ke+eKz26wJ5KOg
+          password: g1Ef=LP4GX0Iiuc2vSpTsWK4CTBoOYn3
           registry: contosocontainerregistry17072.azurecr.io
           repository: contoso-website
           tags: latest
