@@ -11,11 +11,12 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - name: Build and push staging image
-        uses: docker/build-push-action@v1.1.1
+      - uses: azure/docker-login@v1
         with:
           username: ContosoContainerRegistry17072
           password: g1Ef=LP4GX0Iiuc2vSpTsWK4CTBoOYn3
-          registry: contosocontainerregistry17072.azurecr.io
-          repository: contoso-website
-          tags: latest
+          login-server: contosocontainerregistry17072.azurecr.io
+          
+      - run: |
+         docker build . -t contosocontainerregistry17072.azurecr.io/contoso-website
+         docker push contosocontainerregistry17072.azurecr.io/contoso-website
