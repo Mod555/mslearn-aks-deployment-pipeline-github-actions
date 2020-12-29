@@ -18,5 +18,5 @@ jobs:
           login-server: contosocontainerregistry17072.azurecr.io
           
       - run: |
-         docker build . -t contosocontainerregistry17072.azurecr.io/contoso-website
-         docker push contosocontainerregistry17072.azurecr.io/contoso-website
+         docker build . -t contosocontainerregistry17072.azurecr.io/contoso-site
+         docker push contosocontainerregistry17072.azurecr.io/contoso-site
