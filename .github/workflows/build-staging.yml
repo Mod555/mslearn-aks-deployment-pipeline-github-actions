@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@main
 
       - uses: azure/docker-login@v1
         with:
@@ -18,5 +18,5 @@ jobs:
           login-server: contosocontainerregistry17072.azurecr.io
           
       - run: |
-         docker build . -t contosocontainerregistry17072.azurecr.io/contoso-site
-         docker push contosocontainerregistry17072.azurecr.io/contoso-site
+         docker build . -t contosocontainerregistry17072.azurecr.io/contoso-site:${{ github.sha }}
+         docker push contosocontainerregistry17072.azurecr.io/contoso-site:${{ github.sha }}
